@@ -1,7 +1,11 @@
-let geoCode = "BE";
-let year = 2011;
+let geoCode = "BG";
+let year = 2023;
+
+function preload() {
+}
 
 function setup() {
+  calculateMaximumArea();
   createCanvas(windowWidth, windowHeight);
   noStroke();
 }
@@ -15,10 +19,10 @@ function draw() {
   //get rows in current year
   let rowFromYear = getRowFromYear(areaRows, year);
 
-  let area = Number(rowFromYear[8]);
+  let area = Number(rowFromYear[8]) / maximumDraughtArea * windowWidth;
 
   console.log(area);
 
   fill(200, 100, 0);
-  square(windowWidth * 0.5 - area * 0.5, windowWidth * 0.5 - area * 0.5, area);
+  square(windowWidth * 0.5 - area * 0.5, windowHeight * 0.5 - area * 0.5, area);
 }
