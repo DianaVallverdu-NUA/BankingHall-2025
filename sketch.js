@@ -1,5 +1,5 @@
-let geoCode = "BG";
-let year = 2023;
+let geoCode = "FR";
+let year = 2022;
 
 function preload() {
 }
@@ -19,10 +19,8 @@ function draw() {
   //get rows in current year
   let rowFromYear = getRowFromYear(areaRows, year);
 
-  let area = Number(rowFromYear[8]) / maximumDraughtArea * windowWidth;
-
-  console.log(area);
+  let area = Number(rowFromYear[8]) / maximumDraughtArea * windowHeight;
 
   fill(200, 100, 0);
-  square(windowWidth * 0.5 - area * 0.5, windowHeight * 0.5 - area * 0.5, area);
+  circle(windowWidth * 0.5, windowHeight * 0.5, area);
 }
