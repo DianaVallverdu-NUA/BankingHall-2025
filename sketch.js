@@ -18,15 +18,6 @@ function setup() {
 
 function draw() {
   background(220);
-
-  //get rows in current area
-  // let areaRows = getRowsFromArea(geoCode);
-
-  //get rows in current year
-  // let rowFromYear = getRowFromYear(areaRows, year);
-
-  // let area = Number(rowFromYear[8]) / maximumDraughtArea * windowHeight;
-
   
   for(index in countries) {
     const country = countries[index];
