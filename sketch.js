@@ -17,7 +17,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(0);
   
   for(index in countries) {
     const country = countries[index];

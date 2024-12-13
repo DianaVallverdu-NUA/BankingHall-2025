@@ -13,9 +13,9 @@ function getAreasForYear(year) {
   areas = [];
   centres = [];
   for (row of draughtInformation) {
-    if(row[0] === "eu_sdg") continue; //skip first line
+    if (row[0] === "eu_sdg") continue; //skip first line
     if (row[5] === "EU27_2020") continue; //ignore EU
-    if (Number(row[7]) != year) continue; //only get rows from that number
+    if (Number(row[7]) != year) continue; //only get rows from that year
 
     //get info
     const countryName = row[6];
